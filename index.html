@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CLICKER Bingo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Input for number of cards -->
+  <div class="card-controls">
+    <label for="card-count">Number of Cards: </label>
+    <input type="number" id="card-count" min="1" max="10" value="1" />
+    <button onclick="generateCards()">Generate Cards</button>
+  </div>
+
+  <div id="card-wrapper">
+    <h1>CLICKER</h1>
+    <div id="bingo-card-container"></div>
+  </div>
+
+  <div class="controls">
+  <button onclick="callNumber()">Call Number</button>
+  <button onclick="resetCalledNumbers()">Reset Called Numbers</button>
+  <div id="called-number"></div>
+  <ul id="called-numbers-list"></ul>
+  <button onclick="downloadCards()">Download Cards</button>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
